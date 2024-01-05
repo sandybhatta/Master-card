@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+    background: #121321;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 250px;
+}
+section::before{
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    transform: translate(-150px,-100px);
+    background: linear-gradient(90deg, #f0e623,#f3f5f5);
+}
+section::after{
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    transform: translate(150px,100px);
+    background: linear-gradient(90deg, #b0275c,#f3f5f5);
+}
+.parent-container{
+    width:375px;
+    height: 240px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.parent-container:hover{
+    transform: rotateY(180deg);
+}
+.parent-container .child{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, 0.1);
+    backdrop-filter: blur(35px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    box-shadow: 0 24px 450px rgba(162, 157, 157, 0.9);
+    backface-visibility: hidden;
+}
+header, .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin: 20px;
+}
+header .logo img{
+    width: 65px;
+    height: 40px;
+
+}
+h4{
+    font-family: "poppins",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+
+}
+.front img.chippu{
+    width:45px;
+    height:35px;
+    margin: 20px;
+}
+.child .child-details{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+}
+.child-nameNum h4{
+    margin: 2px 0 ;
+    padding: 0;
+    font-weight: 300;
+}
+.child-nameNum h5{
+    padding-top: 25px;
+    font-weight: 400;
+}
+.range{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 55px;
+    left: 20px;
+}
+.range h4{
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+}
+.range h6{
+    
+    align-self: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.child.back{
+    border: none;
+    padding: 15px 25px 25px;
+    transform: rotateY(180deg);
+}
+.back h6{
+    font-size: 0.5rem;
+    margin: 25px 25px 0;
+}
+.back .magnet-strip{
+    display:inline-block;
+    position: relative;
+    height:45px;
+    width:100%;
+    background: #000;
+}
+.back .signature{
+    display:inline-flex;
+    position: relative;
+    top: 2px;
+    margin-left: 20px;
+    border-radius: 5px;
+    height:35px;
+    width:80%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.back .signature span{
+    display: block;
+    height:4px;
+    width: 98%;
+    background: #dadada;
+    border-radius: 2px 2px 2px 2px;
+}
+span.side{
+    background: #fff;
+    position: relative;
+    right: 4px;
+    top: 18px;
+    color: #000;
+    border-radius: 0 3px 3px 0;
+}
+.back h5{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
